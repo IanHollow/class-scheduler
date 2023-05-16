@@ -5,7 +5,7 @@ from SchoolClass import SchoolClass
 class Schedule:
     def __init__(self) -> None:
         self.quaters = ['Fall', 'Winter', 'Spring']
-        self.main_df = pd.read_csv('class_data_alt.csv')
+        self.main_df = pd.read_csv('class_data.csv')
         self.main_df.columns = ['Name', 'Taken', 'PR', 'F', 'W', 'S']
         self.avail_cls: dict[str, SchoolClass] = {}
         self.cls_taken: dict[str, SchoolClass] = {}
@@ -20,8 +20,7 @@ class Schedule:
             # get row as list (a single class)
             row = self.main_df.loc[i, :].values.flatten().tolist()
             # not a taken class add to avail_cls
-            my_SchoolClass = SchoolClass(
-                row[0], row[1], row[3:], row[2].split(', ') if row[2] != 'None' else [])
+            my_SchoolClass = SchoolClass(row[0], row[1], row[3:], row[2].split(', ') if type(row[2]) == float() else [])
             self.avail_cls[row[0]] = my_SchoolClass
 
         # remove class already taken from avail_cls

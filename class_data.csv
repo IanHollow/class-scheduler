@@ -1,12 +1,12 @@
 Name, Taken, Pre_Reqs, Fall, Winter, Spring
 MATH 19A,True,None,True,True,True
 MATH 19B,True,MATH 19A,True,True,True
-AM 30,False,"AM 10, MATH 19B",True,False,True
+AM 30,True,"AM 10, MATH 19B",True,False,True
 AM 10,True,None,True,True,True
-AM 20,False,"MATH 19B, AM 10",False,True,True
+AM 20,True,"MATH 19B, AM 10",False,True,True
 CSE 12,True,CSE 20,True,True,True
-CSE 13S,False,CSE 12,True,True,True
-CSE 16,False,MATH 19A,True,True,True
+CSE 13S,True,CSE 12,True,True,True
+CSE 16,True,MATH 19A,True,True,True
 CSE 20,True,None,True,True,True
 CSE 30,True,CSE 20,True,True,True
 PHYS 5A,True,None,True,True,False
@@ -25,5 +25,5 @@ CSE 115A,False,"WRIT 1, CSE 101, CSE 130",True,True,True
 CSE 150,False,"CSE 16, CSE 12, CSE 30",True,True,True
 CSE 113,False,"CSE 12, CSE 101",False,True,False
 CSE 115D,False,CSE 115A,True,False,False
-WRIT 2,False,WRIT 1,True,True,True
+WRIT 2,True,WRIT 1,True,True,True
 WRIT 1,True,None,True,True,True
